@@ -20,14 +20,10 @@ function MessageStyle({time,message,isUser,id}) {
                        
                         className={'flex w-full   '+(isUser?'justify-end':'')}>
                           <div
-                          onTouchStart={(e)=>{
-                            console.log(e);
-                          }}
                            onContextMenu={(e)=>{
                               e.preventDefault();
                               dispatch(setMenuO(null));
                               dispatch(setMenuO(id));
-                              console.log(e);
                               setClient({x:e.clientX,y:e.clientY});
                         }}
                           className={'px-4 py-1 rounded-lg order-2 my-1 relative '+(isUser?' bg-[#effdde] dark:bg-[#2b5278]  mr-2 rounded-tr-2xl rounded-br-none messageT ':' bg-[#ffffff] dark:bg-[#182533] rounded-tl-2xl  ml-1 rounded-bl-none')} >
