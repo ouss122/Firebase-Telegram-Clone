@@ -100,9 +100,7 @@ export function getMessages(docId,fun){
   let coll=collection(db,'groups',docId,'messages');
   let collQ=query(coll,orderBy('time'));
   onSnapshot(collQ,(snapshot)=>{
-    if (!snapshot.empty){
       fun(snapshot);
-    }
   });
 }
 export function addNewUser(uid){
