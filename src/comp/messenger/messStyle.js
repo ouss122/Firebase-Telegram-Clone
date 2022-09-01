@@ -26,7 +26,7 @@ function MessageStyle({time,message,isUser,id}) {
                               dispatch(setMenuO(id));
                               setClient({x:e.clientX,y:e.clientY});
                         }}
-                          className={'px-4 py-1 rounded-lg order-2 my-1 relative '+(isUser?' bg-[#effdde] dark:bg-[#2b5278]  mr-2 rounded-tr-2xl rounded-br-none messageT ':' bg-[#ffffff] dark:bg-[#182533] rounded-tl-2xl  ml-1 rounded-bl-none')} >
+                          className={'px-4 pt-1 pb-2 rounded-lg order-2 my-1 relative '+(isUser?' bg-[#effdde] dark:bg-[#2b5278]  mr-2 rounded-tr-2xl rounded-br-none messageT ':' bg-[#ffffff] dark:bg-[#182533] rounded-tl-2xl  ml-1 rounded-bl-none')} >
                              <p   className={'text-black select-none xmd:select-auto dark:text-white break-words whitespace-pre-line pb-3 min-w-[14vw] xmd:min-w-[10vw] max-w-[50vw] xmd:max-w-[40vw]  '}>
                             {message.message}
                            </p>
