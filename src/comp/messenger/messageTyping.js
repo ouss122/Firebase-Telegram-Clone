@@ -29,7 +29,6 @@ function MessTyping({scRef}) {
         <input 
         accept="image/*"
         onChange={(e)=>{
-          console.log(e.target.files);
           addImage(e.target.files[0],selected.id,user.name,user.uid);  
         }}
         ref={fileR}  type="file" className="hidden" />
