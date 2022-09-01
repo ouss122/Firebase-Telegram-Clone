@@ -57,7 +57,7 @@ function SelectedR() {
                 type:'tween',
                 duration:0.6               
              }}
-        className="w-full flex h-full flex-col  absolute xmd:static z-10 " >
+        className="w-full flex h-full flex-col  absolute xmd:static z-10 dark:bg-[#0e1621] from-[#d1d68c] via-[#89b883] to-[#d1d68c] dark:from-transparent dark:via-transparent dark:to-transparent" >
         <nav className=' bg-[#ffffff] relative dark:bg-[#17212b] flex-shrink-0 w-full flex items-center  shadow-sm h-12' >
         <BackArrow
              onClick={()=>{
@@ -79,7 +79,7 @@ function SelectedR() {
                    {selected===null?null:selected.owner===user.uid?'Delete this Room':'Leave the Group'}
             </h1>
         </nav>
-        <div ref={ref} className="bg-gradient-to-br from-[#d1d68c] via-[#89b883] to-[#d1d68c] dark:from-transparent dark:via-transparent dark:to-transparent dark:bg-[#0e1621] flex-grow scroll-smooth overflow-y-scroll">
+        <div ref={ref} className="bg-gradient-to-br flex-grow scroll-smooth overflow-y-scroll mb-2">
            {loading?<div className='flex h-full justify-center items-center' >
             <Loading/>
            </div>:(
