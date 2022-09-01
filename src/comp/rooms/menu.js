@@ -74,8 +74,12 @@ function Menu({setClicked,setNewGr,setJoinGr}) {
                   </div>
                  )}
                 <div onClick={()=>{
-                  signout().then(()=>{
+                  signout().then(()=>{                  
                      dispatch(setUser(null));
+                     dispatch(setEditing(null));
+                     dispatch(setUserGrp(null));
+                     dispatch(setMenuO(null));
+                     dispatch(selectRoom(null));
                   })
                 }} className='h-12 px-2 flex items-center hover:bg-black/10  dark:hover:bg-white/10 cursor-pointer' >
                     <img className='bg-[#f06964] h-8 rounded-md mr-4 p-1'  src={logOut} alt="" />
