@@ -57,16 +57,14 @@ function SelectedR() {
                 type:'tween',
                 duration:0.6               
              }}
-        className="w-full flex h-full flex-col  absolute xmd:static z-10 dark:bg-[#0e1621] from-[#d1d68c] via-[#89b883] to-[#d1d68c] dark:from-transparent dark:via-transparent dark:to-transparent" >
+        className="w-full flex h-full flex-col  absolute xmd:static z-10 " >
         <nav className=' bg-[#ffffff] relative dark:bg-[#17212b] flex-shrink-0 w-full flex items-center  shadow-sm h-12' >
         <BackArrow
              onClick={()=>{
                dispatch(selectRoom(null))
             }}
              className='visible xmd:hidden   ml-1 mt-[2px] cursor-pointer w-11 hover:fill-[#888888] fill-[#a3a3a3] dark:fill-[#56616b] dark:hover:fill-[#85888b]' />
-                 
-                 
-                 <div
+            <div
              style={{
               backgroundColor:selected!==null?selected.color:null
              }}
@@ -79,7 +77,7 @@ function SelectedR() {
                    {selected===null?null:selected.owner===user.uid?'Delete this Room':'Leave the Group'}
             </h1>
         </nav>
-        <div ref={ref} className="bg-gradient-to-br flex-grow scroll-smooth overflow-y-scroll mb-2">
+        <div ref={ref} className="bg-gradient-to-br flex-grow scroll-smooth overflow-y-scroll dark:bg-[#0e1621] from-[#d1d68c] via-[#89b883] to-[#d1d68c] dark:from-transparent dark:via-transparent dark:to-transparent">
            {loading?<div className='flex h-full justify-center items-center' >
             <Loading/>
            </div>:(
@@ -103,7 +101,7 @@ function SelectedR() {
                         )
                     }else{
                         return (
-                            <ShowImage key={e.id} time={time} isUser={isUser} message={message} id={e.id}/>
+                            <ShowImage key={e.id} time={time} isUser={isUser} message={message} id={e.id} />
                         )
                     }
                 })}
