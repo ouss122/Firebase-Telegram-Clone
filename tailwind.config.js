@@ -9,12 +9,13 @@ module.exports = {
   theme: {
     screens:{
       'esm':'350px',
-      'exmd':'373px',
+      'exmd':'450px',
       ...defaultTheme.screens
     },
     extend: {
       screens:{
         xmd:'700px',
+        elg:'860px ',
         xlg:'1150px',
       },
       colors:{
