@@ -83,7 +83,7 @@ function SelectedR() {
            {loading?<div className='flex h-full justify-center items-center' >
             <Loading/>
            </div>:(
-            <div className='text-white/80 h-full w-full flex flex-col pt-2 px-0.5' >
+            <div className='text-white/80 h-full w-full flex flex-col pt-1 px-0.5' >
                 {messages.map((e)=>{
                     let message=e.data();
                     let date=new Date();
